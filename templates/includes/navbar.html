@@ -1,0 +1,74 @@
+{% load static %}
+
+<!-- Navbar  -->
+<nav class="p-3 flex bg-white justify-between items-center">
+    <a href="{% url 'home' %}" id="brand" class="flex gap-2 items-center">
+    <img class="object-cover max-w-16 max-h-16 rounded-lg" src="{% static 'img/logo2.png'%}" alt="Logo">
+    </a>
+
+   
+    <div id="dropdownButton" class="dropdown relative inline-block">
+        <button class="border border-gray-300 px-2 py-2  font-medium bg-purple-300 rounded-lg hover:bg-blue-300 transition dropbtn" onclick="toggleDropdown()"><i class="fa-solid fa-bars pe-1"></i>All Category</button>
+        <div id="myDropdown" class="border border-gray-300 px-2 py-2 w-27 rounded-lg font-medium flex-col dropdown-content absolute bg-white z-1 hidden">
+        <a href="{% url 'store' %}" class="hover:bg-blue-100 block text-blue-950">All Products</a>
+        {% for category in links %}
+        <a href="{{ category.get_url }}" class="hover:bg-blue-100 block text-blue-950">    
+        {{ category.category_name }}
+        </a>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div id="search" class="hidden lg:flex">
+        <input class=" border border-gray-300 w-96 px-4 py-2 rounded-l-lg" type="text" placeholder="search">
+        <button>
+            <h4 class="text-lg font-medium text-blue-950 border border-gray-300 px-4 py-2 rounded-r-lg bg-gray-400 hover:bg-gray-300">Search</h4>
+        </button>
+    </div>
+
+    <div id="nav-menu" class="hidden lg:flex gap-8">
+        <a href="http://127.0.0.1:8000/" class="font-medium hover:text-blue-500 text-lg text-blue-950">Home</a>
+        <a href="{% url 'store' %}" class="font-medium hover:text-blue-500 text-lg text-blue-950">Shop</a>
+        <a href="blog.html" class="font-medium hover:text-blue-500 text-lg text-blue-950">Blog</a>
+        <a href="about.html" class="font-medium hover:text-blue-500 text-lg text-blue-950">About</a>
+        <a href="contact.html" class="font-medium hover:text-blue-500 text-lg text-blue-950">Contact</a>
+        <a href="login.html" class="font-medium hover:text-blue-500 text-lg text-blue-950">Login</a>
+        <a href="cart.html" class="font-medium hover:text-blue-500 text-lg text-blue-950"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+    <button class="hidden lg:flex gap-2 items-center font-medium border border-gray-300 px-6 py-2 rounded-lg hover:border-gray-300 text-lg text-blue-950">
+        <img src="{% static 'img/assets/asset 1.svg'%}" alt="">
+        <span>Electron Developers</span>
+        <i class="fa-solid fa-arrow-right mt-2"></i>
+    </button>
+
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-midnight"></i>
+    </button>
+
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-gray-300 inset-0 p-3">
+        <div id="nav-bar" class="flex justify-between">
+            <a href="#" id="brand" class="flex gap-2 items-center">
+                <img class="object-cover max-w-16 max-h-16 rounded-lg" src="{% static 'img/logo2.png' %}" alt="Logo">
+                <span class="text-lg font-medium text-blue-950 border border-gray-300 px-6 py-2 rounded-lg">All Category</span>
+            </a>
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-xmark text-midnight"></i>
+            </button>
+        </div>
+        <div class="mt-6">
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">Home</a>
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">Shop</a>
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">Blog</a>
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">About</a>
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">Contact</a>
+            <a href="#" class="font-medium p-3 m-3 hover:bg-gray-100 block rounded-lg text-lg text-blue-950">Login</a>
+        </div>
+        <div class="h-px bg-gray-600"></div>
+            <button class="w-full mt-6 flex gap-2 items-center font-medium px-6 py-4 rounded-lg hover:bg-gray-300   text-lg text-blue-950">
+            <img src="{% static 'img/assets/asset 1.svg'%}" alt="">
+            <span>Electron Developers</span>
+            </button>
+        </div>
+</nav>
+
+
