@@ -37,25 +37,6 @@ if (close) {
 // });
 
 
-// Used in Javascript for category view 
-function filterProducts() {
-            // Get the value selected in the dropdown
-            const selectedValue = document.getElementById('category').value;
-            // Select all product elements
-            const products = document.querySelectorAll('.product');
-
-            products.forEach(product => {
-                // If "all" is selected or the product matches the category, show it
-                if (selectedValue === 'all' || product.getAttribute('data-category') === selectedValue) {
-                    product.classList.remove('hidden');
-                } else {
-                    // Otherwise, hide it
-                    product.classList.add('hidden');
-                }
-            });
-        }
-
-
 /* When the user clicks on the button, toggle between hiding and showing the content */
 function toggleDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
