@@ -1,0 +1,91 @@
+
+{% load static %}
+
+<div class="hidden lg:flex h-52 w-screen bg-linear-0 bg-purple-400 via-purple-300 to-transparent justify-between items-center">
+            <div class=" m-20 p-16">
+                <h4 class="text-4xl text-blue-950 mt-4" ><b>Sign uo for Newsletters</b></h4>
+                <p class="text-2xl text-gray-600 py-4">Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+            </div>
+            <div class=" rounded-lg border-gray-300 bg-gray-100 me-20 mt-10">
+                <input class="w-100 ml-4 p-1" type="text" placeholder="Your email address">
+                <button class="text-white text-lg bg-gray-900 rounded-r-lg w-20 p-1 ">Sign Up</button>
+            </div>
+        </div>
+        <div class="hidden sm:flex lg:hidden flex-col h-56 w-screen bg-linear-0 bg-purple-400 via-purple-300 to-transparent justify-between items-center mt-20">
+            <div class=" ml-14 p-4">
+                <h4 class="text-2xl text-blue-950 mt-4" ><b>Sign uo for Newsletters</b></h4>
+                <p class="text-xl text-gray-600 py-4">Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+            </div>
+            <div id="email" class="flex justify-center items-center py-4">
+            <input class=" border border-gray-300 w-96 px-4 py-2 rounded-l-lg" type="text" placeholder="Your email address">
+            <button>
+                <h4 class="text-lg font-medium text-blue-950 px-4 py-2 rounded-r-lg bg-gray-400 hover:bg-gray-300">Sign Up</h4>
+            </button>
+        </div>
+        </div>
+        <div class="sm:hidden flex flex-col h-56 w-screen bg-linear-0 bg-purple-400 via-purple-300 to-transparent justify-between items-center mt-10">
+            <div class=" ml-2 p-2">
+                <h4 class="text-2xl text-blue-950 mt-4" ><b>Sign uo for Newsletters</b></h4>
+                <p class="text-xl text-gray-600 py-4">Get E-mail updates about our latest shop and <span>special offers</span>.</p>
+            </div>
+            <div id="email" class="flex justify-center items-center py-4">
+            <input class=" border border-gray-300 w-64 px-4 py-2 rounded-l-lg" type="text" placeholder="Your email address">
+            <button>
+                <h4 class="text-lg font-medium text-blue-950 px-4 py-2 rounded-r-lg bg-gray-400 hover:bg-gray-300">Sign Up</h4>
+            </button>
+        </div>
+</div>
+      
+      <footer class="mx-20 flex justify-between  flex-wrap items-center">
+        <div class="flex flex-col mt-5">
+  
+            <h4 class="text-black text-xl mb-5"><b>Contact</b></h4>
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="">
+                <h4 class="text-black text-xl mt-5">Follow us</h4>
+                <div class="">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h4 class="text-black text-xl mb-5"><b>About</b></h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="flex flex-col">
+            <h4 class="text-black text-xl mb-5"><b>My Account</b></h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="flex flex-col mt-17">
+            <h4 class="text-black text-xl mb-5"><b>Install App</b></h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img class="border rounded-lg m-1 border-gray-600" src="{% static 'img/app.jpg'%}" alt="">
+                <img class="border rounded-lg m-1 border-gray-600" src="{% static 'img/play.jpg' %}" alt="">
+            </div>
+            <p>Secure Payment Gateway</p>
+            <img src="{% static 'img/pay.png'%}" alt="">
+        </div> 
+        
+        <div class="w-full items-center mt-10 ">
+            <p class="flex justify-center items-center text-lg">@2026. Prasad Hemade - HTML CSS Ecommerce Template</p>
+        </div>
+        
+      </footer>
