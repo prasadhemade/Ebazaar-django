@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="w-full h-full bg-linear-to-b from-purple-200 via-purple-100 to-transparent">
+
+ <div style="background-image: url('{% static 'img/Modern_clothing.jpeg' %}'); height: 230px; background-size: cover ;" class="bg-center w-full">
+    
+</div>
+
+   <section id="cart" class="mx-36 my-20">
+        <table width="90%" class=" ">
+            <thead>
+                <tr class="border border-gray-400 font-bold text-2xl border-l-0 border-r-0">
+                    <td class="px-10">Remove</td>
+                    <td class="pl-20 py-4">Image</td>
+                    <td class="px-44">Product</td>
+                    <td class="px-20">Price</td>
+                    <td class="px-12">Quantity</td>
+                    <td class="px-12">Subtotal</td>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td><i><a href="#" class="flex justify-center"><i class="far fa-times-circle text-blue-600" ></i></a></td>
+                    <td><img class="w-32 p-4 ml-12 mt-4" src="{% static 'img/Smartwatch.jpeg' %}" alt=""></td>
+                    <td class="font-medium text-lg text-center">Smart Watch</td>
+                    <td class="text-center font-medium text-lg">$118.19</td>
+                    <td class="text-center font-medium text-lg ">                
+                    <button class="p-2 border border-gray-400"><i class="fa-solid fa-minus"></i></button>
+                    <input class="p-2 w-16 border border-gray-400" type="text" value="1">
+                    <button class="p-2 border border-gray-400"><i class="fa-solid fa-plus"></i></button>               
+                    </td>
+                    <td class="text-center font-medium text-lg">$118.19</td>
+                </tr>
+                
+            </tbody>
+        </table>        
+    </section>
+
+    <section id="cart-add" class="section-p1 flex flex-wrap justify-between mb-20">
+        <div id="coupon" class="ml-30">
+            <h3 class="font-bold text-2xl pb-4">Apply Coupon</h3>
+            <div class="">
+                <input class="w-114 border border-gray-400 p-2 font-medium text-lg" type="text" placeholder="Enter your coupon">
+                <button class="normal border border-gray-400 rounded-r-lg p-2 w-20 bg-gray-500 text-white font-bold text-lg">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal" class="border border-gray-400 me-30 w-150 p-10 font-medium text-lg ">
+            <h3 class="font-bold text-2xl pb-4">Cart Totals</h3>
+            <table class="border-collapse border border-slate-400 w-130">
+                <tr>
+                    <td class="border border-slate-400 p-2">Cart Subtotal</td>
+                    <td class="border border-slate-400 p-2">$ 335</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-400 p-2">Shipping</td>
+                    <td class="border border-slate-400 p-2">Free</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-400 p-2">Total</td>
+                    <td class="border border-slate-400 p-2"$ 335</td>
+                </tr>
+            </table>
+            <button class="normal p-2 my-4 border border-gray-400 bg-gray-500 text-white rounded-lg">Proceed to checkout</button>
+        </div>
+    </section>
+
+
+{% endblock  %}

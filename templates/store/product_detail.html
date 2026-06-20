@@ -47,8 +47,10 @@
             <Div class="mb-4">
             {% if single_product.stock <= 0 %}
                 <h5 class="border flex justify-center border-gray-400 font-medium rounded-lg p-1 w-30 bg-red-500 text-white">Out of Stock</h5>
-            {% else %} 
+            {% else %}
+            <a href="{% url 'add_cart' single_product.id %}"> 
             <button class="normal border border-gray-400 font-medium rounded-lg p-1 w-30 bg-gray-500 text-white">Add To Cart</button>
+            </a>
             {% endif %} 
             </Div>
             <h4 class="font-bold text-3xl py-4">Product Details</h4>
